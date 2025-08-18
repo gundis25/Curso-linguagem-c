@@ -22,7 +22,8 @@ int main()
     printf("Digite sua idade: ");
     scanf("%d", &pessoa1.idade);
     printf("Digite f ou m para o sexo:");
-    scanf(" %c", &pessoa1.sexo);
+    scanf("%c");
+    scanf("%c", &pessoa1.sexo);
     
     printf("\nNome: %sIdade: %d\nSexo: %c\n", pessoa1.nome, pessoa1.idade, pessoa1.sexo);
     
