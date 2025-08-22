@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
-
+#include <string.h>
 /*
             Aula 175: Criaando uma matriz de struct.
 
@@ -31,33 +31,32 @@ Pessoa lerPessoa(){
     Pessoa p;
     printf("\nDigite seu nome: ");
     fgets(p.nome, 100, stdin);
+    p.nome[strcspn(p.nome, "\n")] = '\0';
     printf("Digite sua idade: ");
     scanf("%d", &p.idade);
-    scanf("%c");
     printf("Digite f ou m para o sexo:");
-    scanf("%c", &p.sexo);
+    scanf(" %c", &p.sexo);
     printf("Digite sua data de nascimento no formato dd mm aaaa:");
     scanf("%d%d%d", &p.dataNas.dia, &p.dataNas.mes, &p.dataNas.ano);
-    scanf("%c");
+    getchar();
     return p;
 }
 
 int main() {
-    setlocale(LC_ALL, "Portuguese");
     int i, j;
     Pessoa pessoas[2] [2];
 
-    for(i = 0; i < 2; i++){
-        for(j = 0; j <= 2; i++)
+    for(i = 1; i <= 2; i++){
+        for(j = 1; i <= 2; i++)
             pessoas[i][j] = lerPessoa();    
     } 
     
-    for(i = 1; i < 2; i++){
-        for(j = 0; j <= 2; i++)
+    for(i = 1; i <= 2; i++){
+        for(j = 1; i <= 2; i++)
             imprimirPessoa(pessoas[i] [j]);   
     }
     
 
     return 0;
     
-}    
+}   
