@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
-        Aula 166: Jogo da velha com funções e procedimentos
-
-        Escrito por Wagner Gaspar
-        Março de 2021
-*/
 
 // variáveis globais
 char jogo[3][3]; // matriz do jogo
