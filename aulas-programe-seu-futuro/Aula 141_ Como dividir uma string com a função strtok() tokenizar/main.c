@@ -10,7 +10,7 @@ int main(){
 
     char palavra[50] = {"Bom!dia.simpatia Bom dia"};
     char *pt;
-    
+    //Divide a string nos seguintes delimitadores (! . e espaço).
     pt = strtok(palavra, "!. " );
     
     while(pt){
