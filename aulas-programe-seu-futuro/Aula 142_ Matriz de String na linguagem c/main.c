@@ -13,14 +13,13 @@ int main(){
 
     for(l = 0; l < 5; l++){
         printf("\nDigite o nome da posicao %d. ", l);
-        /*
+        
         scanf("%25[^\n]", nomes[l]);
         
         //Remove o enter do buffer do teclado
-        scanf("%cent
-        */
-                
-        fgets(nomes[l], 25, stdin);
+        getchar();
+     
+        //fgets(nomes[l], 25, stdin);
     }
 
     for(l = 0; l < 5; l++)
