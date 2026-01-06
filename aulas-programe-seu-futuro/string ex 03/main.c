@@ -24,7 +24,6 @@ int main()
         printf("Digite uma frase: ");
         scanf("%50[^\n]", letras);
      
-        do{
             printf("\nDigite 1 para maiusculo ou 2 para minusculo: ");
             scanf("%d", &escolha);
             limparBufferEntrada();
@@ -52,8 +51,6 @@ int main()
                 
             }
         }while(escolha != 1 && escolha != 2);
-        
-   }while(escolha == 1 || escolha == 2);
     return 0;
 }    
     
