@@ -12,11 +12,11 @@ int main()
     printf("Str1 = %s", str1);
 
     while (str1[i] != '\0'){
-        tam = tam + 1;
+        tam++;
         i++;
     }
-    printf("\nTamanho da string = %d", tam);
-    tam = tam - 1;
+    printf("\nTamanho da str1 = %d", tam);
+    tam--;
     i = 0;
     while (str1[i] != '\0'){
         str2[tam - i] = str1[i];
@@ -25,6 +25,6 @@ int main()
     str2[i] = '\0';
 
     printf("\nStr2 = %s", str2);
-
+    printf("\ntamanho de str2 = %d", strlen(str2));
     return 0;
 }
